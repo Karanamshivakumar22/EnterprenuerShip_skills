@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Users, Book, Edit, Trash2, Search, LogOut } from "lucide-react";
+import { Users, Edit, Trash2, Search, LogOut } from "lucide-react";
 import { useAuth } from "../contexts/AuthContext";
 
 const AdminPanel = () => {

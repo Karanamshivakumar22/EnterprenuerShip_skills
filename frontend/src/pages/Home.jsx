@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, DollarSign, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../contexts/AuthContext'; // Import Auth Context
 
 const Home = () => {
+  const { isAuthenticated } = useContext(AuthContext); // Get auth status
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -31,12 +34,25 @@ const Home = () => {
               Build your skills, grow your business, and transform your future with our comprehensive learning platform.
             </p>
             <div className="space-x-4">
-              <Link to="/auth" className="btn-primary">
-                Get Started
-              </Link>
-              <Link to="/courses" className="btn-secondary">
-                Explore Courses
-              </Link>
+              {isAuthenticated ? (
+                <>
+                  <Link to="/dashboard" className="btn-primary">
+                    Dashboard
+                  </Link>
+                  <Link to="/profile" className="btn-secondary">
+                    Profile
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link to="/auth" className="btn-primary">
+                    Get Started
+                  </Link>
+                  <Link to="/courses" className="btn-secondary">
+                    Explore Courses
+                  </Link>
+                </>
+              )}
             </div>
           </motion.div>
         </div>
@@ -69,7 +85,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* success Section */}
+      {/* Success Stories Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
@@ -88,10 +104,7 @@ const Home = () => {
 };
 
 const FeatureCard = ({ icon, title, description }) => (
-  <motion.div
-    whileHover={{ y: -5 }}
-    className="card"
-  >
+  <motion.div whileHover={{ y: -5 }} className="card">
     <div className="flex flex-col items-center text-center">
       {icon}
       <h3 className="mt-4 text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
@@ -101,10 +114,7 @@ const FeatureCard = ({ icon, title, description }) => (
 );
 
 const TestimonialCard = ({ name, role, image, quote }) => (
-  <motion.div
-    whileHover={{ scale: 1.02 }}
-    className="card"
-  >
+  <motion.div whileHover={{ scale: 1.02 }} className="card">
     <div className="flex flex-col items-center text-center">
       <img
         src={image}

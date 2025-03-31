@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { BookOpen, TrendingUp, Clock } from 'lucide-react';
 import axios from 'axios';
 
@@ -21,24 +21,24 @@ const Dashboard = () => {
   const courses = [
     {
       id: 1,
-      title: "Business Planning Fundamentals",
+      title: "Business Planning and Strategy",
       progress: 60,
-      nextLesson: "Creating a Business Model Canvas",
-      thumbnail: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
+      nextLesson: "Market Research Techniques",
+      thumbnail: "/src/assests/Business Planning and Strategy.jpg"
     },
     {
       id: 2,
-      title: "Financial Management Basics",
+      title: "Financial Management",
       progress: 30,
       nextLesson: "Understanding Cash Flow",
-      thumbnail: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80"
+      thumbnail: "/src/assests/Financial.jpg"
     },
     {
       id: 3,
-      title: "Digital Marketing Essentials",
+      title: "Digital Marketing ",
       progress: 15,
       nextLesson: "Social Media Strategy",
-      thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
+      thumbnail: "/src/assests/Digital marketing.jpg"
     }
   ];
 
@@ -93,7 +93,7 @@ const StatCard = ({ icon, title, value }) => (
 
 const CourseCard = ({ title, progress, nextLesson, thumbnail }) => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
-    <img src={thumbnail} alt={title} className="w-full h-48 object-cover" />
+    <img src={thumbnail} alt={title} className="w-full h-65 object-cover" />
     <div className="p-6">
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{title}</h3>
       <div className="mb-4">
