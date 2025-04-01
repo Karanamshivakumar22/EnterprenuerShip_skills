@@ -7,7 +7,7 @@ const modules = [
   {
     title: 'Business Planning and Strategy',
     playlistUrl: 'https://youtube.com/playlist?list=PL18rl3KEg0oIdg5pB2aX6KFaBjtN3V3OA',
-    thumbnail: '/src/assests/Business Planning and Strategy.jpg',
+    thumbnail: 'https://github.com/Karanamshivakumar22/EnterprenuerShip_skills/blob/main/frontend/src/assests/Business%20Planning%20and%20Strategy.jpg',
   },
   {
     title: 'Financial Literacy & Management',
