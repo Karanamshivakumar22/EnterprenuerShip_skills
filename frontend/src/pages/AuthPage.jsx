@@ -18,23 +18,10 @@ export default function AuthPage() {
     setError(''); // Reset error on new submission
 
     try {
-      let response;
+const dummyToken = 'mock-jwt-token'; // Simulating an authentication token
+    localStorage.setItem('token', dummyToken);
 
-      if (isLogin) {
-        response = await axios.post('http://localhost:5000/api/login', {
-          email,
-          password,
-        });
-      } else {
-        response = await axios.post('http://localhost:5000/api/register', {
-          name, // Changed from username to name
-          email,
-          password,
-        });
-      }
-
-      localStorage.setItem('token', response.data.access);
-      navigate('/dashboard');
+    navigate('/dashboard', { replace: true });
     } catch (error) {
       if (error.response) {
         const { status, data } = error.response;
