@@ -7,32 +7,32 @@ const modules = [
   {
     title: 'Business Planning and Strategy',
     playlistUrl: 'https://youtube.com/playlist?list=PL18rl3KEg0oIdg5pB2aX6KFaBjtN3V3OA',
-    thumbnail: '/src/assests/Business Planning and Strategy.jpg',
+    thumbnail: '../src/assests/Business Planning and Strategy.jpg',
   },
   {
     title: 'Financial Literacy & Management',
     playlistUrl: 'https://youtube.com/playlist?list=PLIS94dmuRf9MaTTKwkE979KrhZhZEq6mY',
-    thumbnail: '/src/assests/Financial.jpg',
+    thumbnail: '../src/assests/Financial.jpg',
   },
   {
     title: 'Digital Marketing & Outreach',
     playlistUrl: 'https://youtube.com/playlist?list=PLEiEAq2VkUULa5aOQmO_al2VVmhC-eqeI',
-    thumbnail: '/src/assests/Digital marketing.jpg',
+    thumbnail: '../src/assests/Digital marketing.jpg',
   },
   {
     title: 'E-commerce Essentials',
     playlistUrl: 'https://youtube.com/watch?v=ay6RKzh3QSg',
-    thumbnail: '/src/assests/E_commerce.jpg',
+    thumbnail: '../src/assests/E_commerce.jpg',
   },
   {
     title: 'Effective Communication Skills',
     playlistUrl: 'https://youtube.com/playlist?list=PLm_MSClsnwm-AIEbpyIxoTT8t7UzkHSYC',
-    thumbnail: '/src/assests/Effective Communication.jpg',
+    thumbnail: '../src/assests/Effective Communication.jpg',
   },
   {
     title: 'Leadership & Team Management',
     playlistUrl: 'https://youtube.com/playlist?list=PL26pr4T7OzVMIqLz61IxO1CAAjzSY1-mS',
-    thumbnail: '/src/assests/Leadership and Team Management.jpg',
+    thumbnail: '../src/assests/Leadership and Team Management.jpg',
   },
 ];
 
