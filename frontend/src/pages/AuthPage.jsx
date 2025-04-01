@@ -21,12 +21,12 @@ export default function AuthPage() {
       let response;
 
       if (isLogin) {
-        response = await axios.post('http://localhost:5000/api/login', {
+        response = await axios.post('api/login', {
           email,
           password,
         });
       } else {
-        response = await axios.post('http://localhost:5000/api/register', {
+        response = await axios.post('api/register', {
           name, // Changed from username to name
           email,
           password,
